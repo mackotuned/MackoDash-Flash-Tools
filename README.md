@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/mackodash-hero.png" alt="MackoDash — Plug &amp; Play Digital Dash for EK &amp; RD1" width="750"/>
+<img src="mackodash-hero.png" alt="MackoDash — Plug &amp; Play Digital Dash for EK &amp; RD1" width="750"/>
 
 # MackoDash Flash Tools
 
@@ -45,10 +45,10 @@ Designed to work seamlessly with **Hondata S300 V3**, with minimal wiring and fa
 
 | File | Description |
 |---|---|
-| [`tools/MackoDashUtility.exe`](tools/MackoDashUtility.exe) | Windows app — Firmware Update tab + Theme Builder tab |
-| [`tools/mackodash.bin`](tools/mackodash.bin) | ESP32-P4 dashboard application firmware |
-| `tools/CUSTOMER_INSTRUCTIONS.txt` | Quick-start instructions (also covered below) |
-| `tools/MackoDash_SquareLine_Customer_Instructions.txt` | Full custom theme object-naming reference (formatted version: [docs/squareline-theme-guide.md](docs/squareline-theme-guide.md)) |
+| [`MackoDashUtility.exe`](MackoDashUtility.exe) | Windows app — Firmware Update tab + Theme Builder tab |
+| [`mackodash.bin`](mackodash.bin) | ESP32-P4 dashboard application firmware |
+| [`CUSTOMER_INSTRUCTIONS.txt`](CUSTOMER_INSTRUCTIONS.txt) | Quick-start instructions (also covered below) |
+| [`MackoDash_SquareLine_Customer_Instructions.txt`](MackoDash_SquareLine_Customer_Instructions.txt) | Full custom theme object-naming reference (formatted version: [squareline-theme-guide.md](squareline-theme-guide.md)) |
 
 > **Keep these files together.** `MackoDashUtility.exe`, `mackodash.bin`, and both `.txt` files need to stay in the same folder for the utility to work correctly.
 
@@ -61,14 +61,13 @@ Designed to work seamlessly with **Hondata S300 V3**, with minimal wiring and fa
 ## Getting Started
 
 1. Click the green **Code** button above → **Download ZIP** (or clone the repo).
-2. Extract the ZIP anywhere on your PC.
-3. Open the `tools/` folder — leave everything in it together.
-4. Launch `MackoDashUtility.exe`.
+2. Extract the ZIP anywhere on your PC — keep all the extracted files together in that folder.
+3. Launch `MackoDashUtility.exe`.
 
 ## Firmware Update
 
 <p align="center">
-  <img src="images/firmware-update-screenshot.png" alt="MackoDash Utility — Firmware Update tab" width="650"/>
+  <img src="firmware-update-screenshot.png" alt="MackoDash Utility — Firmware Update tab" width="650"/>
   <br/>
   <sub>The Firmware Update tab, validating <code>mackodash.bin</code> before flashing</sub>
 </p>
@@ -90,13 +89,13 @@ MackoDash supports fully custom dashboard themes designed in **SquareLine Studio
 
 **Quick version:**
 
-1. Design your dashboard in SquareLine Studio, naming any live-data objects using the [MackoDash naming convention](docs/squareline-theme-guide.md) (e.g. `dash_rpm_value`, `dash_speed_bar`, `dash_coolant_arc`).
+1. Design your dashboard in SquareLine Studio, naming any live-data objects using the [MackoDash naming convention](squareline-theme-guide.md) (e.g. `dash_rpm_value`, `dash_speed_bar`, `dash_coolant_arc`).
 2. Export the complete project and ZIP the exported folder.
 3. Open MackoDash Utility → **Theme Builder** tab.
 4. Select the SquareLine ZIP, enter a theme name and ID, then **Build Theme** → **Copy to SD Card**.
 5. Insert the SD card into MackoDash and reboot.
 
-📄 **See the full [SquareLine Theming Guide](docs/squareline-theme-guide.md)** for every supported object name, live value, Bar/Arc range, and design rule.
+📄 **See the full [SquareLine Theming Guide](squareline-theme-guide.md)** for every supported object name, live value, Bar/Arc range, and design rule.
 
 ## Troubleshooting
 
@@ -104,7 +103,7 @@ MackoDash supports fully custom dashboard themes designed in **SquareLine Studio
 |---|---|
 | USB port shows busy / won't connect | Close serial monitors and any other flashing programs, then retry |
 | Firmware doesn't show as Validated | Re-download `mackodash.bin` and make sure it's in the same folder as the utility |
-| Theme fails strict validation | Check object names against the [theming guide](docs/squareline-theme-guide.md) — strict mode is intentional and stops on unsupported fonts/objects rather than guessing |
+| Theme fails strict validation | Check object names against the [theming guide](squareline-theme-guide.md) — strict mode is intentional and stops on unsupported fonts/objects rather than guessing |
 
 ## Support
 
@@ -121,3 +120,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 <div align="center"><sub>Built for the MackoDash community 🏁</sub></div>
+
