@@ -2,50 +2,6 @@ MACKODASH WINDOWS TOOLS
 =======================
 
 CHOOSE ONE APP
-Most customers should use:
-
-Standalone alternatives:
-
-
-You only need one of these EXE files. The standalone apps perform the same
-focused jobs as the matching sections in MackoDash Utility.
-
-IMPORTANT ZIP FILE DIFFERENCE
-MackoDash-Firmware.zip is the official dashboard firmware update. Use it only
-with Firmware Update or MackoDashUpdateFlasher.exe. Do not extract it.
-
-A SquareLine export ZIP is your custom theme project. Use it only with Theme
-Builder or MackoDashThemeBuilder.exe.
-
-BUILD A CUSTOM THEME
-1. Export the complete one-screen project from SquareLine Studio.
-2. ZIP the exported folder.
-3. Open Theme Builder in MackoDash Utility, or open
-4. Choose the SquareLine ZIP and enter the theme name and ID.
-5. Select Build Theme, then Copy to SD Card.
-
-See MackoDash_SquareLine_Customer_Instructions.txt for all supported object
-names, Bars, Arcs, values, ranges, and design rules.
-
-UPDATE FIRMWARE
-1. Connect MackoDash to the Windows PC with its update USB cable.
-2. Keep the dashboard powered for the entire update.
-3. Open Firmware Update in MackoDash Utility, or open
-4. Select the official MackoDash-Firmware.zip and confirm that it shows as
-5. Confirm the dashboard COM port.
-6. Select Flash ESP32-P4 Firmware and wait for verification to finish.
-
-The firmware ZIP updates the ESP32-P4 bootloader, partition table, OTA
-metadata, dashboard application, and SPIFFS storage. It does not erase NVS,
-so dashboard settings and odometer data remain intact. SD-card themes and
-ESP32-C6 firmware are not changed.
-
-Do not unplug USB or power during an update. If the port is busy, close serial
-monitors and other flashing programs, then retry.
-MACKODASH WINDOWS TOOLS
-=======================
-
-CHOOSE ONE APP
 --------------
 Most customers should use:
   MackoDashUtility.exe
