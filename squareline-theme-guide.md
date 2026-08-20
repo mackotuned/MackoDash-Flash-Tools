@@ -21,7 +21,7 @@ Use the exact names in this guide whenever possible. They're ready to copy and p
 6. Add a Button named `dash_settings_button`.
 7. Export the complete C project from SquareLine.
 8. ZIP the entire exported folder.
-9. Open MackoDash Theme Builder and select the SquareLine ZIP.
+9. Open `MackoDashUtility.exe`, choose **Build a Theme**, and select the SquareLine ZIP.
 10. Build the `.mdtheme.zip` package, then use **Copy to SD Card**.
 
 > SquareLine normally adds a `ui_` prefix to generated variable names — that's fine. For example, an object named `dash_rpm_value` may export as `ui_dash_rpm_value`. MackoDash accepts both.
@@ -196,7 +196,7 @@ The firmware recognizes advanced names such as `dash_cel_indicator`, `dash_vtec_
 1. Save the SquareLine project.
 2. Export the complete C project — not a screenshot or preview image.
 3. ZIP the entire exported project folder with its screens, images, and project information intact.
-4. Open `MackoDashUtility.exe` → **Theme Builder** tab.
+4. Open `MackoDashUtility.exe` and choose **Build a Theme**.
 5. Select the SquareLine export ZIP.
 6. Enter the theme display name and a unique lowercase Theme ID.
 7. Leave strict validation enabled for customer packages.

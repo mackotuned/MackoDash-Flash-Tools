@@ -12,7 +12,7 @@
 
 [Overview](#overview) •
 [Compatible Vehicles](#compatible-vehicles) •
-[Choose Your App](#choose-your-app) •
+[Download](#download) •
 [Getting Started](#getting-started) •
 [Firmware Update](#firmware-update) •
 [Custom Themes](#custom-themes) •
@@ -41,17 +41,10 @@ Designed to work seamlessly with **Hondata S300 V3**, with minimal wiring and fa
 | EK | Honda Civic |
 | RD1 | Honda CR-V |
 
-## Choose Your App
+## Download
 
-There are three Windows apps. **Most customers should download MackoDash Utility.**
-
-| Download | Use it for | What else you need |
-|---|---|---|
-| `MackoDashUtility.exe` **(recommended)** | Firmware updates **and** custom theme building in one app | `MackoDash-Firmware.zip` only when updating firmware |
-| `MackoDashUpdateFlasher.exe` | Firmware updates only | `MackoDash-Firmware.zip` |
-| `MackoDashThemeBuilder.exe` | Building and copying custom SD-card themes only | A SquareLine Studio export ZIP |
-
-You only need **one** of the three EXE files. The standalone apps provide the same focused workflow as the matching section of MackoDash Utility.
+`MackoDashUtility.exe` is the only customer application. Its Home screen opens
+either **Update Firmware** or **Build a Theme**.
 
 > **Do not mix up the ZIP files:** `MackoDash-Firmware.zip` is an official dashboard update used by the firmware updater. A SquareLine export ZIP is your own theme project used by Theme Builder.
 
@@ -74,7 +67,7 @@ Also included:
 
 1. Click the green **Code** button above → **Download ZIP** (or clone the repo).
 2. Extract the downloaded ZIP to a normal folder on your PC.
-3. Launch `MackoDashUtility.exe` for the all-in-one experience, or launch the standalone app for only the job you need.
+3. Launch `MackoDashUtility.exe`.
 
 Windows may show a SmartScreen warning because the apps are not Microsoft Store packages. Confirm that the publisher/download source is this official `mackotuned` repository before continuing.
 
@@ -84,10 +77,10 @@ Windows may show a SmartScreen warning because the apps are not Microsoft Store 
 
 1. Connect MackoDash to your Windows PC with its update USB cable.
 2. Keep the dashboard powered for the entire update.
-3. Open **Firmware Update** in `MackoDashUtility.exe`, or launch `MackoDashUpdateFlasher.exe`.
+3. Open `MackoDashUtility.exe` and choose **Update Firmware**.
 4. Select the official `MackoDash-Firmware.zip` and confirm that it shows as **Validated**.
 5. Confirm the dashboard's COM port.
-6. Select **Flash ESP32-P4 Firmware** and wait for verification to finish.
+6. Select **Install Firmware** and wait for verification to finish.
 
 The firmware ZIP updates the ESP32-P4 bootloader, partition table, OTA metadata, dashboard application, and SPIFFS storage. It does **not** erase NVS, so dashboard settings and odometer data remain intact. SD-card themes and ESP32-C6 firmware are not changed.
 
@@ -99,7 +92,7 @@ MackoDash supports fully custom dashboard themes designed in **SquareLine Studio
 
 1. Design your dashboard in SquareLine Studio, naming any live-data objects using the [MackoDash naming convention](squareline-theme-guide.md) (e.g. `dash_rpm_value`, `dash_speed_bar`, `dash_coolant_arc`).
 2. Export the complete project and ZIP the exported folder.
-3. Open **Theme Builder** in `MackoDashUtility.exe`, or launch `MackoDashThemeBuilder.exe`.
+3. Open `MackoDashUtility.exe` and choose **Build a Theme**.
 4. Select the SquareLine ZIP, enter a theme name and ID, then **Build Theme** → **Copy to SD Card**.
 5. Insert the SD card into MackoDash and reboot.
 
@@ -111,7 +104,6 @@ MackoDash supports fully custom dashboard themes designed in **SquareLine Studio
 |---|---|
 | USB port shows busy / won't connect | Close serial monitors and any other flashing programs, then retry |
 | Firmware doesn't show as Validated | Re-download the official `MackoDash-Firmware.zip`; do not extract or modify it |
-| Not sure which app to use | Use `MackoDashUtility.exe`; it contains both customer workflows |
 | Not sure which ZIP to select | Firmware updater: `MackoDash-Firmware.zip`. Theme Builder: your SquareLine export ZIP |
 | Theme fails strict validation | Check object names against the [theming guide](squareline-theme-guide.md) — strict mode is intentional and stops on unsupported fonts/objects rather than guessing |
 
