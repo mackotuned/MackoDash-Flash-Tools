@@ -78,7 +78,7 @@ Windows may show a SmartScreen warning because the apps are not Microsoft Store 
 1. Connect MackoDash to your Windows PC with its update USB cable.
 2. Keep the dashboard powered for the entire update.
 3. Open `MackoDashUtility.exe` and choose **Update Firmware**.
-4. Select the official `MackoDash-Firmware.zip` and confirm that it shows as **Validated**.
+4. Select **Download Latest** to fetch and validate the current official firmware, or use **Choose ZIP** for a bundle already on the PC.
 5. Confirm the dashboard's COM port.
 6. Select **Install Firmware** and wait for verification to finish.
 
@@ -93,8 +93,9 @@ MackoDash supports fully custom dashboard themes designed in **SquareLine Studio
 1. Design your dashboard in SquareLine Studio, naming any live-data objects using the [MackoDash naming convention](squareline-theme-guide.md) (e.g. `dash_rpm_value`, `dash_speed_bar`, `dash_coolant_arc`).
 2. Export the complete project and ZIP the exported folder.
 3. Open `MackoDashUtility.exe` and choose **Build a Theme**.
-4. Select the SquareLine ZIP, enter a theme name and ID, then **Build Theme** → **Copy to SD Card**.
-5. Insert the SD card into MackoDash and reboot.
+4. Select the SquareLine ZIP, enter a theme name and ID, then choose **Build Theme**.
+5. Use **Preview Theme** to check typical and longest values, then select **Copy to SD Card**.
+6. Insert the SD card into MackoDash and reboot.
 
 📄 **See the full [SquareLine Theming Guide](squareline-theme-guide.md)** for every supported object name, live value, Bar/Arc range, and design rule.
 
@@ -103,7 +104,7 @@ MackoDash supports fully custom dashboard themes designed in **SquareLine Studio
 | Issue | Fix |
 |---|---|
 | USB port shows busy / won't connect | Close serial monitors and any other flashing programs, then retry |
-| Firmware doesn't show as Validated | Re-download the official `MackoDash-Firmware.zip`; do not extract or modify it |
+| Firmware doesn't show as Validated | Use **Download Latest**, or re-download the official `MackoDash-Firmware.zip` without modifying it |
 | Not sure which ZIP to select | Firmware updater: `MackoDash-Firmware.zip`. Theme Builder: your SquareLine export ZIP |
 | Theme fails strict validation | Check object names against the [theming guide](squareline-theme-guide.md) — strict mode is intentional and stops on unsupported fonts/objects rather than guessing |
 

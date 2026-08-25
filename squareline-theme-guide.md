@@ -18,11 +18,11 @@ Use the exact names in this guide whenever possible. They're ready to copy and p
 3. Add **Labels** for numbers and text values.
 4. Add **Bars** or **Arcs** only for the supported gauges listed below.
 5. Select each live object and enter its MackoDash name in SquareLine's object **Name** field.
-6. Add a Button named `dash_settings_button`.
+6. Add Buttons named `dash_settings_button` and `dash_record_button`.
 7. Export the complete C project from SquareLine.
 8. ZIP the entire exported folder.
 9. Open `MackoDashUtility.exe`, choose **Build a Theme**, and select the SquareLine ZIP.
-10. Build the `.mdtheme.zip` package, then use **Copy to SD Card**.
+10. Build the `.mdtheme.zip` package, use **Preview Theme** to check both value modes and warnings, then use **Copy to SD Card**.
 
 > SquareLine normally adds a `ui_` prefix to generated variable names — that's fine. For example, an object named `dash_rpm_value` may export as `ui_dash_rpm_value`. MackoDash accepts both.
 
@@ -110,6 +110,16 @@ dash_settings_button
 
 MackoDash connects this Button to the dashboard Settings menu. It may use any supported position, size, color, and text — just keep it easy to reach.
 
+## Required Record Button
+
+Every customer theme should contain one SquareLine **Button** named:
+
+```
+dash_record_button
+```
+
+MackoDash connects this Button to SD data logging. It starts and stops recording and shows a confirmation popup. If a theme omits it, the firmware adds a fallback REC control near Settings.
+
 ## Using the Same Live Value More Than Once
 
 Add `_2` through `_9` when a value appears more than once. Works with Labels, Bars, Arcs, unit Labels, and the settings Button.
@@ -169,6 +179,7 @@ The names above are preferred; these shorter alternatives are also accepted.
 | `dash_fuel_value` | `fuel_level_value` |
 | `dash_odo_value` | `odometer_value` |
 | `dash_settings_button` | `settings_button` |
+| `dash_record_button` | `record_button`, `logging_button` |
 
 For Bars and Arcs, the accepted short name is the preferred name without `dash_`. Coolant also accepts `coolant_bar`/`coolant_arc`. Intake temperature also accepts `air_temp_bar`/`air_temp_arc`.
 
@@ -201,8 +212,9 @@ The firmware recognizes advanced names such as `dash_cel_indicator`, `dash_vtec_
 6. Enter the theme display name and a unique lowercase Theme ID.
 7. Leave strict validation enabled for customer packages.
 8. Select **Build Theme Package**.
-9. Select **Copy to SD Card** and choose the SD card drive.
-10. Insert the SD card into MackoDash and reboot.
+9. Select **Preview Theme** and check Typical Values, Longest Values, and all reported warnings.
+10. Select **Copy to SD Card** and choose the SD card drive.
+11. Insert the SD card into MackoDash and reboot.
 
 The finished file is placed in `/MACKODASH/THEMES`. MackoDash supports up to **30** SD card themes.
 
@@ -217,6 +229,8 @@ The finished file is placed in `/MACKODASH/THEMES`. MackoDash supports up to **3
 - [ ] Duplicate values use `_2`, `_3`, and so on
 - [ ] Static/decorative objects do not start with `dash_`
 - [ ] `dash_settings_button` is present and easy to tap
+- [ ] `dash_record_button` is present and easy to tap
 - [ ] Labels fit the longest example values
+- [ ] Theme Preview passes typical and longest-value checks
 - [ ] Theme Builder strict validation passes without warnings
 - [ ] The finished theme is tested on MackoDash before distribution
