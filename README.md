@@ -4,7 +4,7 @@
 
 # MackoDash Flash Tools
 
-**Official firmware update &amp; custom theme tools for the MackoDash digital gauge cluster**
+**Official firmware update, custom theme, and driving log tools for the MackoDash digital gauge cluster**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)](#requirements)
@@ -16,6 +16,7 @@
 [Getting Started](#getting-started) •
 [Firmware Update](#firmware-update) •
 [Custom Themes](#custom-themes) •
+[Driving Logs](#driving-logs) •
 [Troubleshooting](#troubleshooting) •
 [Support](#support)
 
@@ -31,6 +32,7 @@ This repository contains the official MackoDash Windows tools customers use to:
 
 - ⚡ **Update dashboard firmware** on the ESP32-P4
 - 🎨 **Build and install custom SD-card themes** designed in SquareLine Studio
+- 📈 **Download and review driving logs** recorded on the dashboard SD card
 
 Designed to work seamlessly with **Hondata S300 V3**, with minimal wiring and factory connectors — no cutting required.
 
@@ -44,7 +46,7 @@ Designed to work seamlessly with **Hondata S300 V3**, with minimal wiring and fa
 ## Download
 
 `MackoDashUtility.exe` is the only customer application. Its Home screen opens
-either **Update Firmware** or **Build a Theme**.
+**Update Firmware**, **Build a Theme**, or **View Driving Logs**.
 
 > **Do not mix up the ZIP files:** `MackoDash-Firmware.zip` is an official dashboard update used by the firmware updater. A SquareLine export ZIP is your own theme project used by Theme Builder.
 
@@ -86,7 +88,7 @@ The firmware ZIP updates the ESP32-P4 bootloader, partition table, OTA metadata,
 
 ## Custom Themes
 
-MackoDash supports fully custom dashboard themes designed in **SquareLine Studio** (LVGL 8.4, 1024×600 canvas) and installed via SD card.
+MackoDash supports fully custom dashboard themes designed in **SquareLine Studio** (LVGL 8.4, 1024×600 canvas) and installed via SD card or the dashboard USB update cable.
 
 **Quick version:**
 
@@ -94,16 +96,33 @@ MackoDash supports fully custom dashboard themes designed in **SquareLine Studio
 2. Export the complete project and ZIP the exported folder.
 3. Open `MackoDashUtility.exe` and choose **Build a Theme**.
 4. Select the SquareLine ZIP, enter a theme name and ID, then choose **Build Theme**.
-5. Use **Preview Theme** to check typical and longest values, then select **Copy to SD Card**.
-6. Insert the SD card into MackoDash and reboot.
+5. Use **Preview Theme** to check typical and longest values.
+6. Select **Copy to SD Card**, or connect the dashboard and select **Send over USB**.
+
+An SD card must be inserted in the dashboard for USB theme installation. The
+package is verified before installation, and the dashboard restarts when the
+transfer completes.
 
 📄 **See the full [SquareLine Theming Guide](squareline-theme-guide.md)** for every supported object name, live value, Bar/Arc range, and design rule.
+
+## Driving Logs
+
+Open **View Driving Logs** to review a CSV from the PC, find recordings on a
+removable SD card, or download recordings through the dashboard USB update
+cable. USB downloads are CRC-verified and open directly in the synchronized
+graph viewer.
+
+The USB cable uses a serial file-transfer connection. The dashboard SD card
+does not appear as a Windows drive. Keep a working SD card inserted and stop
+active drive recording before downloading logs or sending a theme.
 
 ## Troubleshooting
 
 | Issue | Fix |
 |---|---|
 | USB port shows busy / won't connect | Close serial monitors and any other flashing programs, then retry |
+| USB log/theme transfer says SD not found | Insert a working SD card in the dashboard and restart it |
+| USB log/theme transfer says recording active | Stop the current driving-log recording, then retry |
 | Firmware doesn't show as Validated | Use **Download Latest**, or re-download the official `MackoDash-Firmware.zip` without modifying it |
 | Not sure which ZIP to select | Firmware updater: `MackoDash-Firmware.zip`. Theme Builder: your SquareLine export ZIP |
 | Theme fails strict validation | Check object names against the [theming guide](squareline-theme-guide.md) — strict mode is intentional and stops on unsupported fonts/objects rather than guessing |
