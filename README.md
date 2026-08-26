@@ -119,7 +119,7 @@ active drive recording before downloading logs or sending a theme.
 ## Dashboard Quick Controls
 
 - Tap **Settings** for the full menu; hold **Settings** for Day, Dim, and Night brightness presets.
-- Enable **Auto Record** under System to begin logging when the engine is running and stop after a 30-second stall or CAN-loss grace period.
+- Enable **Auto Record** under **System > Driving Logs** to begin logging when the engine is running and stop after a 30-second stall or CAN-loss grace period.
 - Critical engine warnings use a compact prioritized banner so the active dashboard remains visible.
 - Simulation is hidden by default and can be enabled from Display when needed.
 
