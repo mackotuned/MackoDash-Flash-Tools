@@ -6,6 +6,8 @@
 
 **Official firmware update, custom theme, and driving log tools for the MackoDash digital gauge cluster**
 
+**Current dashboard firmware: 2.0.1 BETA**
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)](#requirements)
 [![MCU](https://img.shields.io/badge/MCU-ESP32--P4%20%2B%20ESP32--C6-red.svg)](#requirements)
@@ -45,6 +47,8 @@ Designed to work seamlessly with **Hondata S300 V3**, with minimal wiring and fa
 
 ## Download
 
+Download the complete customer package from the [latest release](../../releases/latest). Every published version remains available on the [Releases page](../../releases), including its matching firmware and utility build.
+
 `MackoDashUtility.exe` is the only customer application. Its Home screen opens
 **Update Firmware**, **Build a Theme**, or **View Driving Logs**.
 
@@ -67,8 +71,8 @@ Also included:
 
 ## Getting Started
 
-1. Click the green **Code** button above → **Download ZIP** (or clone the repo).
-2. Extract the downloaded ZIP to a normal folder on your PC.
+1. Open the [latest release](../../releases/latest), or choose an older version from [all releases](../../releases).
+2. Download and extract the customer package to a normal folder on your PC.
 3. Launch `MackoDashUtility.exe`.
 
 Windows may show a SmartScreen warning because the apps are not Microsoft Store packages. Confirm that the publisher/download source is this official `mackotuned` repository before continuing.
@@ -80,7 +84,7 @@ Windows may show a SmartScreen warning because the apps are not Microsoft Store 
 1. Connect MackoDash to your Windows PC with its update USB cable.
 2. Keep the dashboard powered for the entire update.
 3. Open `MackoDashUtility.exe` and choose **Update Firmware**.
-4. Select **Download Latest** to fetch and validate the current official firmware, or use **Choose ZIP** for a bundle already on the PC.
+4. Select **Download Latest** to fetch and validate the newest official release, or use **Choose ZIP** with `MackoDash-Firmware.zip` downloaded from any older release.
 5. Confirm the dashboard's COM port.
 6. Select **Install Firmware** and wait for verification to finish.
 
@@ -119,8 +123,9 @@ active drive recording before downloading logs or sending a theme.
 ## Dashboard Quick Controls
 
 - Tap **Settings** for the full menu; hold **Settings** for Day, Dim, and Night brightness presets.
-- Enable **Auto Record** under **System > Driving Logs** to begin logging when the engine is running and stop after a 30-second stall or CAN-loss grace period.
-- Configure the three-stage shift-light RPM, colors, brightness, and optional per-gear targets under **Engine**.
+- Configure automatic recording and log filename types under **Settings > Logs > Driving Logs**.
+- Configure VTEC, redline, warnings, shift-light RPM, colors, brightness, and optional per-gear targets under **Settings > Engine Limits**.
+- Open **Settings > System > Contact & Support** for problem reporting, email, social, and feedback QR codes.
 - Critical engine warnings use a compact prioritized banner so the active dashboard remains visible.
 - Simulation is hidden by default and can be enabled from Display when needed.
 
