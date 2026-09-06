@@ -1,5 +1,9 @@
 # MackoDash SquareLine Theming Guide
 
+> MackoDash 2.1 also includes **Theme Studio** for designing themes directly
+> without SquareLine. This guide remains the reference for importing existing
+> SquareLine Studio projects with Theme Builder.
+
 **Object names, live values, bars, arcs, and theme export**
 Version 1 — SquareLine Studio / LVGL 8.4 — Recommended canvas **1024 × 600**
 
