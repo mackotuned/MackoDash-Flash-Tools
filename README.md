@@ -6,7 +6,7 @@
 
 **Official firmware update, custom theme, and driving log tools for the MackoDash digital gauge cluster**
 
-**Current dashboard firmware: 2.1**
+**Current dashboard firmware: 2.1.1**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)](#requirements)
